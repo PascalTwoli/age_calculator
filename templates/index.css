@@ -1,0 +1,99 @@
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    margin-top: 50px; 
+    color: rgb(54, 54, 54);
+}
+input, button { 
+    padding: 10px; 
+    margin: 5px;
+}
+input {
+    outline: none;
+    border: solid 1px rgb(225, 225, 225);
+    border-radius: 4px;
+}
+input:focus {
+    border-color: black;
+    transition: 0.5s;
+}
+h1{
+    /* color: black; */
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+button:hover {
+    scale: 1.03;
+    transition: 0.5s ease-in-out;
+}
+.buttons button  {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.buttons-after button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: black solid 1px;
+    width: 47.6%;
+}
+
+.div1 {
+    width: fit-content;
+    text-align: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px 2px rgb(228, 227, 227);
+    padding: 10px 20px;
+    
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 100%;
+    height: fit-content;
+}
+
+@keyframes moving-body {
+    0%   {background-color: rgb(64, 111, 64); scale: 1; border: 30%;}
+    50%   {background-color: white;}
+}
+
+.moving-container {
+    /* background-color: rgb(246, 181, 96); */
+    /* border: rgb(246, 181, 96) solid 1px; */
+    background-color: white;
+    scale: 1;
+    animation-name: moving-body;
+    animation-duration: 4s;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 2px rgb(228, 227, 227);
+    padding: 10px 20px;
+}
+
+/* #result {
+    color: white;
+} */
+
+.err-result {
+    color: red;
+}
+
+.success-result {
+    animation-duration: 4s;
+    color: black;
+}
+
+.result-year,
+.result-month,
+.result-day {
+    padding: 0px;
+    margin: 0px;
+}
