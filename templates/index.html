@@ -34,6 +34,9 @@
 
     <script>
 
+        const baseUrl = process.env.API_BASE_URL ?? 'http://localhost:5000';
+        // const baseUrl = 'http://localhost:5000';
+
         const calculateAge = () => {
             let year = document.querySelector("#year").value;
             let month = document.querySelector("#month").value;
@@ -48,7 +51,7 @@
             var lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0)
             var lastDateOfMonth = lastDayOfMonth.getDate();  
 
-            fetch ("https://age-calculator-15xf.onrender.com/age_calculations", {
+            fetch (baseUrl + "/age_calculations", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify ({year, month, day})
