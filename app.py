@@ -26,7 +26,7 @@ def age_calculations():
         birth_year = int(data["year"])
         birth_month = int(data["month"])
         birth_day = int(data["day"])
-
+                
         birth_date = date(birth_year, birth_month, birth_day)
         today = date.today()
         age =  relativedelta(today, birth_date)
