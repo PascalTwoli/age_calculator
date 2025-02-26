@@ -6,7 +6,7 @@ import os
 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, supports_credentials=True)
 port = int(os.environ.get("PORT", 5000))
 app.run(host="0.0.0.0", port=port)
 
@@ -19,6 +19,8 @@ def home():
 @app.route("/age_calculations", methods=["POST"])
 def age_calculations(): 
     try:
+        if request.method == "OPTIONS":
+            return '', 204  # Handle preflight request
         data = request.json
         birth_year = int(data["year"])
         birth_month = int(data["month"])
