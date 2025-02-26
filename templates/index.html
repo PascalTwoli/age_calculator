@@ -48,8 +48,7 @@
             var lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0)
             var lastDateOfMonth = lastDayOfMonth.getDate();  
 
-            fetch ("http://127.0.0.1:5000/age_calculations", {
-            // fetch ("https://age-calculator-15xf.onrender.com", {
+            fetch ("https://age-calculator-15xf.onrender.com/age_calculations", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify ({year, month, day})
